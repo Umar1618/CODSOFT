@@ -1,10 +1,8 @@
 package internship;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
-
-public class NumberGame {
+class NumberGame {
 	
 	static Scanner sc = new Scanner(System.in);
 
@@ -43,6 +41,7 @@ public class NumberGame {
 			System.out.print("\nEnter a Number : ");
 			int userNo = sc.nextInt();
 			sc.nextLine();
+			
 			if(userNo<=0 || userNo>range)
 				System.out.println(">>Range is (1 to 10)<<");
 			else {
@@ -51,12 +50,12 @@ public class NumberGame {
 					win = true;
 					score++;
 				}
-				else if(randomNo > userNo) {
+				else if(randomNo > userNo) 
 					System.out.println(">>Too Low<<");
-				}
-				else if(randomNo < userNo) {
+
+				else if(randomNo < userNo) 
 					System.out.println(">>Too High<<");
-				}
+				
 				attempt--;
 				
 				if(attempt>0 && win == false)
