@@ -5,7 +5,6 @@ import java.util.*;
 class NumberGame {
 	
 	static Scanner sc = new Scanner(System.in);
-
 	static String playerName ;
 	static int rounds = 0, score = 0;
 
@@ -67,9 +66,10 @@ class NumberGame {
 		
 		System.out.print("\nYou Wanna Play again "+playerName+" ? y/n : ");
 		String again = sc.nextLine();
-		
+
 		if(again.equals("y"))
 			play();
-		
+		sc.close();
+
 	}
 }
